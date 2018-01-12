@@ -58,7 +58,7 @@ cURL by default does not come with any CA files or bundles. You can find your ow
 
 Execute the following `configure` command in the working directory of the cURL source code:
 
-    ./configure --prefix=/Applications/MAMP/Library --with-ssl=/usr/local/Cellar/openssl/1.0.2g --with-ca-path=/Applications/MAMP/etc/openssl/certs --with-ca-bundle=/Applications/MAMP/etc/openssl/certs/ca-bundle.crt
+    ./configure --prefix=/Applications/MAMP/Library --with-ssl=/usr/local/Cellar/openssl/1.0.2n --with-ca-path=/Applications/MAMP/etc/openssl/certs --with-ca-bundle=/Applications/MAMP/etc/openssl/certs/ca-bundle.crt
 
 This command is written specifically to build against homebrew's OpenSSL library and the CA bundle you downloaded in step 5. You can add your own options if you wish.
 
@@ -102,7 +102,7 @@ If so, continue, else, something was incorrect about the `configure` command
 
 ### 8) Restart MAMP and confirm OpenSSL version
 
-Open the MAMP application and start the servers. You can use `phpinfo()` to confirm the OpenSSL version under the `curl` section of `phpinfo()`. It should read `SSL Version: OpenSSL/1.0.2g`
+Open the MAMP application and start the servers. You can use `phpinfo()` to confirm the OpenSSL version under the `curl` section of `phpinfo()`. It should read `SSL Version: OpenSSL/1.0.2n`
 
 ## How to Test
 
@@ -112,7 +112,7 @@ Download the `curl-test.php` script from this repository and save it to a web do
 
 Open the PHP script's URL in a web browser, and you should see output like this:
 
-    SSL Version: OpenSSL/1.0.2g
+    SSL Version: OpenSSL/1.0.2n
     PayPal_Connection_OK
 
 _If the output doesn't match, then your MAMP curl library didn't get updated successfully._
